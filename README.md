@@ -135,17 +135,12 @@ Pull requests are welcome! To contribute:
 
 ---
 
-## License
-```
-This project is licensed under the **MIT License**.
-See [LICENSE](LICENSE) for details.
-```
----
+
 
 ## Contact
-```
-Author: **[MjakaMwise](https://github.com/MjakaMwise)**
-Feel free to open an issue for suggestions or questions.
-```
+
+## Author: MjakaMwise
+https://github.com/MjakaMwise
+Feel free to open an issue for suggestions or 
 
 
