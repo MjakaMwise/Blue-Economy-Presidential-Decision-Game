@@ -11,7 +11,7 @@ An interactive simulation where you step into the shoes of a president making to
 - [Features](#features)  
 - [Tech Stack](#tech-stack)  
 - [Game Setup](#game-setup)  
-- [Virtual Mouse (mouse.py)](#virtual-mouse-mousepy)  
+- [Virtual Mouse (mouse.py)](#virtual-mouse-mousepy) 
 - [Project Structure](#project-structure)  
 - [Contributing](#contributing)  
 - [License](#license)  
