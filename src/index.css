@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kenya Blue Economy Design System - Ocean & Presidential Theme */
+
+@layer base {
+  :root {
+    /* Ocean & Coastal Color Palette */
+    --background: 220 15% 97%;
+    --foreground: 220 25% 15%;
+
+    /* Presidential & Ocean Blues */
+    --primary: 205 90% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 205 85% 55%;
+
+    /* Coastal Whites & Light Blues */
+    --secondary: 200 25% 92%;
+    --secondary-foreground: 205 80% 25%;
+
+    /* Glassmorphic Elements */
+    --glass: 0 0% 100%;
+    --glass-border: 200 40% 85%;
+    --glass-shadow: 205 25% 50%;
+
+    /* Ocean Depths */
+    --ocean-deep: 210 85% 25%;
+    --ocean-mid: 205 75% 45%;
+    --ocean-light: 200 60% 75%;
+
+    /* Kenya Flag Colors */
+    --kenya-red: 0 75% 50%;
+    --kenya-green: 140 60% 35%;
+    --kenya-black: 0 0% 15%;
+
+    /* Status Colors */
+    --success: 140 60% 45%;
+    --warning: 45 85% 55%;
+    --destructive: 0 75% 55%;
+    --info: 205 85% 55%;
+
+    /* Backgrounds & Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
+
+    /* Interactive Elements */
+    --muted: 200 25% 92%;
+    --muted-foreground: 220 15% 45%;
+    --accent: 205 85% 95%;
+    --accent-foreground: 205 80% 25%;
+
+    --border: 200 40% 85%;
+    --input: 200 40% 85%;
+    --ring: 205 90% 35%;
+
+    --radius: 1rem;
+
+    /* Glassmorphic Effects */
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border-color: rgba(255, 255, 255, 0.25);
+    --backdrop-blur: blur(12px);
+
+    /* Gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(205, 90%, 35%), hsl(205, 85%, 55%));
+    --gradient-coastal: linear-gradient(180deg, hsl(200, 60%, 75%), hsl(200, 25%, 92%));
+    --gradient-presidential: linear-gradient(135deg, hsl(205, 90%, 35%), hsl(210, 85%, 25%));
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glass: all 0.2s ease-in-out;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+/* Custom Glassmorphic Components */
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border-color);
+    backdrop-filter: var(--backdrop-blur);
+    transition: var(--transition-glass);
+  }
+
+  .glass-card:hover {
+    @apply bg-white/15 border-white/30 shadow-2xl;
+    transform: translateY(-2px);
+  }
+
+  .glass-button {
+    @apply backdrop-blur-md bg-white/20 border border-white/30 rounded-xl px-6 py-3 font-semibold;
+    transition: var(--transition-glass);
+  }
+
+  .glass-button:hover {
+    @apply bg-white/30 border-white/40;
+    transform: scale(1.02);
+  }
+
+  .parameter-bar {
+    @apply relative h-4 bg-white/20 rounded-full overflow-hidden;
+    backdrop-filter: blur(8px);
+  }
+
+  .parameter-fill {
+    @apply h-full transition-all duration-500 ease-out;
+  }
+
+  .ocean-gradient {
+    background: var(--gradient-ocean);
+  }
+
+  .coastal-gradient {
+    background: var(--gradient-coastal);
+  }
+
+  .presidential-gradient {
+    background: var(--gradient-presidential);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-medium;
+    background: linear-gradient(135deg, hsl(205, 85%, 55%) 0%, hsl(201, 44%, 19%) 50%, hsl(204, 42%, 15%) 100%);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3 {
+    @apply font-bold tracking-tight;
+  }
+}
